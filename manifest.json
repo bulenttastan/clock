@@ -1,0 +1,16 @@
+{
+   "name": "World Clock",
+   "version": "1.0",
+   "description": "Interactive world clocks extension, beautiful UI, easily one click to show, work offline.",
+   "browser_action": {
+      "default_icon": "assets/images/logo/19.png",
+      "default_popup": "popup.html"
+   },
+   "icons": {
+      "32": "/assets/images/logo/32.png",
+      "48": "/assets/images/logo/48.png",
+      "64": "/assets/images/logo/64.png",
+      "128": "/assets/images/logo/128.png"
+   },
+   "manifest_version": 2
+}

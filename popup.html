@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="assets/css/popup.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/menu.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-custom.min.css"/>
+</head>
+<body class="dark">
+
+<div id="clockContainer" class="container">
+  <div id="controls">
+    <button id="btn-hourmode" class="btn btn-primary" data-mode="12">12h</button>
+    <form id="add-form" action="" method="post">
+      <div class="input-append">
+        <input id="zone" type="text" placeholder="Please enter a city">
+        <button type="submit" class="btn btn-success" id="btn-add" value="add">Add</button>
+      </div>
+    </form>
+  </div>
+  <div id="clocks"></div>
+</div>
+
+<script type="text/javascript" src="assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="assets/js/lib.js"></script>
+<script type="text/javascript" src="assets/js/clock.js"></script>
+</body>
+</html>

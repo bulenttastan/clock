@@ -1,0 +1,296 @@
+::-webkit-scrollbar {
+  overflow: visible;
+  width: 12px
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0
+}
+
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px
+}
+
+::-webkit-scrollbar-track:horizontal {
+  border-width: 4px 0 0
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, .05);
+  box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1)
+}
+
+::-webkit-scrollbar-track:horizontal:hover {
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1)
+}
+
+::-webkit-scrollbar-track:active {
+  background-color: rgba(0, 0, 0, .05);
+  box-shadow: inset 1px 0 0 rgba(0, 0, 0, .14), inset -1px 0 0 rgba(0, 0, 0, .07)
+}
+
+::-webkit-scrollbar-track:horizontal:active {
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, .14), inset 0 -1px 0 rgba(0, 0, 0, .07)
+}
+
+-dark::-webkit-scrollbar-track:hover {
+  background-color: rgba(255, 255, 255, .1);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, .2)
+}
+
+-dark::-webkit-scrollbar-track:horizontal:hover {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2)
+}
+
+-dark::-webkit-scrollbar-track:active {
+  background-color: rgba(255, 255, 255, .1);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, .25), inset -1px 0 0 rgba(255, 255, 255, .15)
+}
+
+-dark::-webkit-scrollbar-track:horizontal:active {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), inset 0 -1px 0 rgba(255, 255, 255, .15)
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 1px 1px 1px 6px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07)
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  border-width: 6px 1px 1px;
+  padding: 0 0 0 100px;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset -1px 0 0 rgba(0, 0, 0, .07)
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, .4);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .25)
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.35)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  width: 405px;
+  height: 480px;
+  overflow: hidden;
+}
+body {
+	color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #101418;
+}
+.container {
+  background: #fff;
+  margin: 0;
+  padding: 0 0 3px 0;
+  overflow: hidden;
+}
+#controls {
+  height: 30px;
+  padding: 10px 0;
+  border-bottom: solid 1px;
+}
+#controls #zone {
+  margin-left: 20px;
+  width: 227px;
+}
+#controls #btn-hourmode {
+  display: block;
+  float: left;
+  margin-left: 22px;
+}
+#controls #add-form {
+  display: block;
+  margin: 0;
+  float: left;
+}
+
+noscript {
+	font-size: 16px;
+	color: #ff0000;
+	text-align: center;
+}
+a {
+	color: #999;
+	text-decoration: none;
+}
+a img {
+	border: 0;
+}
+
+h1, h2, h3, h4 {
+	margin: 0 0 0px 0;
+	font-weight: normal;
+}
+
+.error {
+	text-align: center;
+	display: block;
+	margin: 40px 0;
+	color: #FF9900;
+}
+
+.autocomplete{
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  color: #000;
+  padding: 0;
+  border-radius: 0;
+  border: solid 1px #ccc;
+}
+.autocomplete .normal{
+  overflow: hidden;
+  white-space: pre;
+  padding: 4px 6px;
+  border-radius: 0;
+}
+.autocomplete .highlited{ font-weight: bold; }
+.autocomplete .selected {
+  background: #d9edf7;
+}
+
+/* ________________________________ */
+
+#clocks {
+  text-align: center;
+  height: 430px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#clocks .clock {
+  width: 370px;
+  height: 148px;
+  padding: 16px 20px;
+  display: block;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: move;
+  border-bottom: solid 1px #ebebeb;
+}
+#clocks .delete {
+  position: absolute;
+  left: 22px;
+  bottom: 28px;
+  display: none;
+}
+#clocks .clock:hover .delete {
+  display: block;
+}
+#clocks .analog {
+  float: right;
+  background: url('/assets/images/face.png') no-repeat;
+}
+#clocks .LCD {
+  float: left;
+  width: 220px;
+  height: 100px;
+  padding: 24px 0;
+  text-align: left;
+}
+#clocks .label-city {
+  font-size: 22px;
+  max-width: 150px;
+  color: #000;
+}
+#clocks .label-time {
+  clear: left;
+  font-size: 30px;
+  padding-top: 2px;
+  color: #000;
+}
+#clocks .label-utc {
+  font-size: 12px;
+  color: #666;
+  padding-left: 5px;
+  padding-top: 8px;
+}
+#clocks .label-date {
+  padding-top: 14px;
+  color: #666;
+  padding-left: 5px;
+}
+#clocks .label-weather {
+  clear: left;
+  font-size: 22px;
+  padding-top: 2px;
+  color: #000;
+}
+.clock span {
+  display: block;
+  float: left;
+}
+#clocks .time .sec,
+#clocks .time .am,
+#clocks .time .offset {
+  font-size: 14px;
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+#clocks .time .offset {
+  top: 44px;
+  font-size: 11px;
+  color: #666;
+}
+#clocks .date {
+  font-size: 11px;
+  text-align: left;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  color: #666;
+}
+#clocks .time .am {
+  top: 26px;
+}
+
+/* ________________________________ */
+
+.dark {
+	background: #1d1d1d;
+	color: #999;
+}
+.dark a {
+	color: #666;
+}
+.dark .container {
+  background: #fff;
+}
+.dark #controls {
+  background: #f1f1f1;
+  border-color: #e5e5e5;
+}
+.dark #clocks .zone {
+	border: 1px solid #666;
+}
+.dark #clocks .time {
+	color: #fff;
+
+}
+.dark #clocks .date {
+	color: #999;
+}
+
+.dark .digital  .clock {
+	background: #212121;
+	border: 1px solid #444;
+}
