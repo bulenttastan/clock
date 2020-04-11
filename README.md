@@ -1,4 +1,4 @@
 World Clock
 =============
 
-A Chrome extension to show world clock with a nice UI.
+[World Clock - Chrome extension](https://chrome.google.com/webstore/detail/world-clock/dngepaapinafpbhfbfjhkcbabhfakmia) to show time in different cities around the world with a beautiful UI.
